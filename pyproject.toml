@@ -1,0 +1,38 @@
+[project]
+name = "td1-scoring-lab"
+version = "0.1.0"
+description = "TD1 - mesurer et dimensionner un service de scoring XGBoost (FastAPI/Uvicorn/Docker)"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "xgboost>=3.4,<4",
+    "pandas>=3.0,<4",
+    "numpy>=2.0,<3",
+    "pyarrow>=18",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "httpx>=0.27",
+    "psutil>=6",
+    "matplotlib>=3.9",
+    "scikit-learn>=1.5",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4",
+    "nbformat>=5",
+    "nbconvert>=7",
+    "ipykernel>=6",
+    "ruff>=0.6",
+    "tabulate>=0.10.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

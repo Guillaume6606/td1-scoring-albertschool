@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+data/*.parquet
+results/*
+!results/.gitkeep
+!results/reference/
+*.prof
+.ipynb_checkpoints/
+.superpowers/
+dist/
+VARIANT
+*.pptx
+.DS_Store
+Dockerfile
+.dockerignore
+scripts/deploy.sh

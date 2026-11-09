@@ -1,0 +1,50 @@
+{
+ "recipe": {
+  "n_estimators": 300,
+  "max_depth": 6,
+  "learning_rate": 0.1,
+  "subsample": 0.8,
+  "colsample_bytree": 0.8,
+  "random_state": 42,
+  "objective": "binary:logistic",
+  "tree_method": "hist"
+ },
+ "xgboost_version": "3.4.1",
+ "history_rows": 500000,
+ "train_rows": 160000,
+ "valid_rows": 40000,
+ "models": {
+  "16": {
+   "auc_valid": 0.7604,
+   "n_trees": 300,
+   "total_nodes": 28082,
+   "total_leaves": 14191,
+   "features_seconds": 0.05,
+   "fit_seconds": 0.97,
+   "model_file_kb": 1127
+  },
+  "64": {
+   "auc_valid": 0.7524,
+   "n_trees": 300,
+   "total_nodes": 27608,
+   "total_leaves": 13954,
+   "features_seconds": 0.22,
+   "fit_seconds": 1.79,
+   "model_file_kb": 1112
+  },
+  "256": {
+   "auc_valid": 0.7509,
+   "n_trees": 300,
+   "total_nodes": 25450,
+   "total_leaves": 12875,
+   "features_seconds": 0.55,
+   "fit_seconds": 4.34,
+   "model_file_kb": 1045
+  }
+ },
+ "data_files_mb": {
+  "history.parquet": 15.8,
+  "train.parquet": 3.7,
+  "transactions.parquet": 15.1
+ }
+}

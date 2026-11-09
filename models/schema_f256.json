@@ -1,0 +1,2311 @@
+{
+ "features": 256,
+ "t0": "2025-07-01T00:00:00+00:00",
+ "model": "model_f256.ubj",
+ "columns": [
+  {
+   "name": "amount",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "log_amount",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "hour",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "weekday",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "is_weekend",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "channel",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "merchant_category",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "country_match",
+   "kind": "raw",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "never"
+  },
+  {
+   "name": "hist_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_std",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "std",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_max",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_days_since_last",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "days_since_last",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_n_categories",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "nunique_category",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_web",
+   "kind": "agg",
+   "window_days": null,
+   "where": "channel==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "amount_ratio_to_mean",
+   "kind": "derived",
+   "window_days": null,
+   "where": null,
+   "stat": null,
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_sum_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_mean_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_std_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "std",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_max_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_min_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "min",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_sum_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_mean_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_std_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "std",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_max_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_min_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "min",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_sum_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_mean_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_std_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "std",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_max_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_min_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "min",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_sum_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_mean_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_std_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "std",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_max_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_min_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "min",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_web_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_foreign_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "country_match==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_n_categories_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "nunique_category",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_days_active_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": null,
+   "stat": "days_active",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_web_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_foreign_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "country_match==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_n_categories_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "nunique_category",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_days_active_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": null,
+   "stat": "days_active",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_web_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_foreign_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "country_match==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_n_categories_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "nunique_category",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_days_active_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": null,
+   "stat": "days_active",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_web_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_foreign_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "country_match==0",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_n_categories_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "nunique_category",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_days_active_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": null,
+   "stat": "days_active",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_night_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "hour<6",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_weekend_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "weekday>=5",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_night_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "hour<6",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_weekend_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "weekday>=5",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_night_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "hour<6",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_weekend_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "weekday>=5",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_night_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "hour<6",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_share_weekend_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "weekday>=5",
+   "stat": "share",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==0",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==1",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==2",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==3",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==3",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==4",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==4",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==5",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==5",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==6",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==6",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==6",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==7",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==7",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==7",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==8",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==8",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==8",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==9",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==9",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==9",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==10",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==10",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==10",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==11",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==11",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==11",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==12",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==12",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==12",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==13",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==13",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==13",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==14",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==14",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==14",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==15",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==15",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==15",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==16",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==16",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==16",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==17",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==17",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==17",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==18",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==18",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==18",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==19",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==19",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_sum",
+   "kind": "agg",
+   "window_days": null,
+   "where": "merchant_category==19",
+   "stat": "sum",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==6",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==7",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==8",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==9",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==10",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==11",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==12",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==13",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==14",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==15",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==16",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==17",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==18",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "merchant_category==19",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==6",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==7",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==8",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==9",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==10",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==11",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==12",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==13",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==14",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==15",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==16",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==17",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==18",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "merchant_category==19",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_mean_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_max_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==0",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_mean_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_max_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==0",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_mean_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_max_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==0",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_mean_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch0_max_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==0",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_mean_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_max_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==1",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_mean_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_max_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==1",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_mean_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_max_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==1",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_mean_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch1_max_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==1",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_mean_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_max_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "channel==2",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_count_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_mean_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_max_30d",
+   "kind": "agg",
+   "window_days": 30,
+   "where": "channel==2",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_count_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_mean_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_max_90d",
+   "kind": "agg",
+   "window_days": 90,
+   "where": "channel==2",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_mean_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "ch2_max_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "channel==2",
+   "stat": "max",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour0_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour0_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour1_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour1_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour2_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour2_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour3_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour3_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==3",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour4_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour4_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==4",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour5_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hour5_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "hour//4==5",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd0_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd0_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==0",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd1_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd1_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==1",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd2_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd2_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==2",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd3_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd3_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==3",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd4_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd4_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==4",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd5_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd5_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==5",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd6_count",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==6",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "wd6_mean",
+   "kind": "agg",
+   "window_days": null,
+   "where": "weekday==6",
+   "stat": "mean",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_p10",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "p10",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_p25",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "p25",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_p50",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "p50",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_p75",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "p75",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "hist_amount_p90",
+   "kind": "agg",
+   "window_days": null,
+   "where": null,
+   "stat": "p90",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat5_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==5",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat6_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==6",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat7_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==7",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat8_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==8",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat9_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==9",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat10_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==10",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat11_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==11",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat12_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==12",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat13_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==13",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat14_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==14",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat15_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==15",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat16_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==16",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat17_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==17",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat18_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==18",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat19_count_7d",
+   "kind": "agg",
+   "window_days": 7,
+   "where": "merchant_category==19",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat0_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "merchant_category==0",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat1_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "merchant_category==1",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat2_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "merchant_category==2",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat3_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "merchant_category==3",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  },
+  {
+   "name": "cat4_count_365d",
+   "kind": "agg",
+   "window_days": 365,
+   "where": "merchant_category==4",
+   "stat": "count",
+   "dtype": "float32",
+   "missing": "NaN si le client n'a aucune ligne dans la fen\u00eatre"
+  }
+ ]
+}
